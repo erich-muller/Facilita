@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/dados_compl.css">
+    <title>Seus interesses</title>
+</head>
+<body>
+    <h1>O que você deseja?</h1>
+    <section id="sup">
+        <form action="" method="post">
+            {{ form.csrf_token }}
+            <section id="cursos">
+            <h2>Adicione os cursos que você deseja fazer</h2>
+            <label for="input-field">Cursos</label>
+            <input type="text" list="options" id="input-field" onchange="gerenciarOptions()">
+                <datalist id="options">
+                <option value="Opção 1">
+                <option value="Opção 2">
+                <option value="Opção 3">
+                <option value="Opção 4">
+                <option value="Opção 5">
+                </datalist>   
+            <!-- <input type="text" class="hide" id="input-array"> -->
+            {{ form.cursos(class="hide", id="input-array", value=cursos) }}
+            <section id="cursos-selecionados">
+                <!-- {% for curso in cursos %}
+                    <div class="botao">
+                        <button>X</button>
+                        <p class="texto-curso">{{ curso }}</p>
+                    </div>
+                {% endfor %} -->
+            </section>
+            </section>
+
+            <section id="grau">
+                <h2>Selecione o grau de formação</h2>
+                <!-- <input type="checkbox" id="Bacharelado"><label for="">Bacharelado</label>
+                <input type="checkbox" id="Licenciatura"><label for="">Licenciatura</label>
+                <input type="checkbox" id="Tecnologico"><label for="">Tecnológico</label>
+                <input type="checkbox" id="ABI"><label for="">Área Básica de Ingresso (ABI)</label> -->
+                <div class="grau">{{ form.bacharelado(id="Bacharelado", checked=dados['bacharelado']) }}<label for="">Bacharelado</label></div>
+                <div class="grau">{{ form.licenciatura(id="Licenciatura", checked=dados['licenciatura']) }}<label for="">Licenciatura</label></div>
+                <div class="grau">{{ form.tecnologico(id="Tecnologico", checked=dados['tecnologico']) }}<label for="">Tecnológico</label></div>
+                <div class="grau">{{ form.abi(id="ABI", checked=dados['abi']) }}<label for="">Área Básica de Ingresso (ABI)</label></div>
+
+            </section>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        
+    </section>
+</body>
+<script src="../static/dados_compl_1.js"></script>
+
+
+</html>

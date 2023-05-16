@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/user.css">
+    <title>Meus Dados</title>
+</head>
+<body>
+    <section>
+        <h1>{{ dados[0] }}</h1>
+        <span>{{ dados[1] }}</span>
+        <ul>
+            <a href="{{ url_for('dados_pessoais') }}"><li>Minha Conta</li></a>
+            <a href="{{ url_for('preferencias_curso') }}"><li>Meus Cursos</li></a>
+            <a href="{{ url_for('preferencias_notas') }}"><li>Minhas Notas</li></a>
+            <a href="{{ url_for('preferencias_vagas') }}"><li>Turnos e Cotas</li></a>
+            <a href="{{ url_for('logout') }}"><li>Sair</li></a>
+        </ul>
+    </section>
+</body>
+</html>

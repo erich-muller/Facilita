@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/dados_compl.css">
+    <title>Seus interesses</title>
+</head>
+<body>
+    <h1>Personalize sua experiência</h1>
+    
+    <section id="sup">
+        
+    <form action="", method="post">
+        
+        {{ form.csrf_token }}
+        <section id="turnos">
+            <h2>Selecione os turnos que você deseja</h2>
+            <!-- <h2>Escolha os turnos que você quer estudar</h2>
+            <label for="turnos"></label>
+            <input type="checkbox" id="Matutino"><label for="">Matutino</label>
+            <input type="checkbox" id="Vespertino"><label for="">Vespertino</label>
+            <input type="checkbox" id="Noturno"><label for="">Noturno</label>
+            <input type="checkbox" id="Integral"><label for="">Integral</label>
+            <input type="checkbox" id="EaD"><label for="">EaD</label> -->
+            
+            <div class="grau">{{ form.matutino(id="Matutino", checked=dados['matutino']) }}<label for="":>Matutino</label></div>
+            <div class="grau">{{ form.vespertino(id="Vespertino", checked=dados['vespertino']) }}<label for="":>Vespertino</label></div>
+            <div class="grau">{{ form.noturno(id="Noturno", checked=dados['noturno']) }}<label for="":>Noturno</label></div>
+            <div class="grau">{{ form.integral(id="Integral", checked=dados['integral']) }}<label for="":>Integral</label></div>
+            <div class="grau">{{ form.ead(id="EaD", checked=dados['ead']) }}<label for="":>Ead</label></div>
+                
+        </section>
+        
+        <section id="cotas">
+            <h2>Selecione os campos que você se adequa</h2>
+            <label for="turnos"></label>
+            <!-- <input type="checkbox" id="escola_pub"><label for="">estudei somente em escola pública</label>
+            <input type="checkbox" id="preto_pardo"><label for="">sou preto ou pardo</label>
+            <input type="checkbox" id="indigena"><label for="">sou indígena</label>
+            <input type="checkbox" id="deficiente"><label for="">sou deficiente</label>
+            <input type="checkbox" id="trans_trav"><label for="">sou Transexual, travesti ou transgênero</label>
+            <input type="checkbox" id="quilombola"><label for="">sou quilombola</label> -->
+
+            <div class="grau">{{ form.escola_publica(id="Escola_Publica", checked=dados['escola_publica']) }}<label for="">estudei em escola pública</label></div>
+            <div class="grau">{{ form.preto_pardo(id="Preto_Pardo", checked=dados['preto_pardo']) }}<label for="">sou preto ou pardo</label></div>
+            <div class="grau">{{ form.indigena(id="Indigena", checked=dados['indigena']) }}<label for="">sou indígena</label></div>
+            <div class="grau">{{ form.deficiente(id="Deficiente", checked=dados['deficiente']) }}<label for="">sou deficiente</label></div>
+            <div class="grau">{{ form.trans_trav(id="Trans_Trav", checked=dados['trans_trav']) }}<label for="">sou transexual, travesti ou transgênero</label></div>
+            <div class="grau">{{ form.quilombola(id="Quilombola", checked=dados['quilombola']) }}<label for="">sou quilombola</label></div>
+        </section>
+
+        <button type="submit">Enviar</button>
+    </form>
+    
+    </section>
+        
+</body>
+<script src="../static/dados_compl_1.js"></script>
+
+</html>
